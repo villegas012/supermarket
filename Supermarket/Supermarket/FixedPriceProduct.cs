@@ -11,7 +11,8 @@
         public override string ToString()
         {
             return $"{base.ToString()}" +
-                $"\n\tTax...........: {Tax * 100}% " +
+                $"\n\tPrice.........: {Price:C2}" +
+                $"\n\tTax...........: {Tax * 100:N2}% " +
                 $"\n\tValue.........: {$"{ValueToPay():C2}"}";
         }
     }

@@ -3,7 +3,7 @@
     public class ComposedProduct : Product
     {
         public float Discount { get; set; }
-        public List<Product> Products { get; set; }
+        public ICollection<Product> Products { get; set; }
         public override decimal ValueToPay()
         {
             decimal value = 0;
@@ -23,7 +23,7 @@
             }
             return $"{base.ToString()}" +
                    $"\n\tProducts......: {$"{productsName}"}" +
-                   $"\n\tDiscount......: {$"{Discount * 100}%"}" +
+                   $"\n\tDiscount......: {$"{Discount * 100:N2}%"}" +
                    $"\n\tValue.........: {$"{ValueToPay():C2}"}";
         }
     }
